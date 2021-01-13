@@ -1,0 +1,34 @@
+<script>
+// Extensions
+import View from "../components/landing/views/View";
+
+// Mixins
+import LoadSections from "../components/landing/mixins/load-sections";
+
+export default {
+  name: "Home",
+
+  metaInfo: { title: "Home" },
+
+  extends: View,
+
+  mixins: [
+    LoadSections([
+      "hero",
+      "theme-features",
+      "features",
+      // "contact-us",
+      // "social-media",
+      // "keep-in-touch",
+      // "info",
+    ]),
+  ],
+
+  props: {
+    id: {
+      type: String,
+      default: "home",
+    },
+  },
+};
+</script>
